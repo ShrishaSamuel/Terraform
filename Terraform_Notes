@@ -1,0 +1,42 @@
+what is Terraform?
+Terraform is an infrastructure as a code (IaC) tool that allows you to build, change, and version infrastructure safely and efficiently.
+
+Components of Terraform
+1. Providers 
+2. Resources
+3. Variables
+4. Statefile
+5. Provisioners
+6. Backends
+7. Modules 
+8. Data Sources
+9. Service Principals
+
+Providers
+Terraform relies on plugins called "providers" to interact with cloud providers, SaaS providers, and other APIs.
+
+Resources
+Resources are the most important element in the terraform language. Each block describes one or more infrastructure objects, such as virtual networks, compute instances, or higher-level components such as DNS records.
+
+Variables
+Using variables in terraform configurations makes our deployment more dynamic.
+A separate file with name "variables.tf" needs to be created in the working directory to store all variables for our used in main.tf configuration file.
+
+Statefile
+After the deployment is finished terraform creates a state file to keep track of current state of the infrastructure.
+It will use this file to compare when you deploy/destroy resources, in other words it compares "current state" with "desired state" using this file.
+A file with a name of "terraform.tfstate" will be crated in your working directory.
+
+Provisioners
+Provisioners provide the ability to run additional steps or tasks when a resource is created or destroyed.
+This is not a replacement for configuration management tools.
+
+Backends
+
+Modules 
+If you want to perform a template-based deployment you can follow modularized approach.
+A module defines a set of parameters which will be passed as key value pairs to actual deployment.
+with this approach you can create multiple environments in a very easy way.
+
+Data Sources
+
